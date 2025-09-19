@@ -100,3 +100,6 @@ if time_to_insert:
 import requests
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
 st.text(smoothiefroot_response.json())
+
+#  Let's Put the JSON into a Dataframe
+sf_df = st.dataframe(ata=smoothiefroot_response.json(), use_container_width=True)
